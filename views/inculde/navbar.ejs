@@ -1,0 +1,13 @@
+<nav>
+    <img src=" <%= client.user.displayAvatarURL({dynamic : true}) %> ">
+    <ul>
+        <li><a href="/"><i class="fas fa-home"></i>&nbsp;Home</a></li>
+        <li><a href="/commands"><i class="fas fa-terminal"></i>&nbsp;Commands</a></li>
+        <li><a href="/developers"><i class="fas fa-code"></i>&nbsp;developers</a></li>
+        <li><a href="/time-convertor"><i class="fas fa-clock"></i>&nbsp;Time Convertor</a></li>
+        <% if(user){ %>
+            <li><a href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp;logout</a></li>
+            <% } %>
+    </ul>
+
+</nav>

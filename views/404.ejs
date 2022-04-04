@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/95fb04c6ee.js" crossorigin="anonymous"></script>
+        <title> <%= client.user.username %> - Not Found </title>
+    </head>
+
+    <body>
+                <!-- nav bar -->
+            <nav>
+                <img src=" <%= client.user.displayAvatarURL({dynamic : true}) %> ">
+                <ul>
+                    <li><a href="/"><i class="fas fa-home"></i>&nbsp;Home</a></li>
+                    <li><a href="/commands"><i class="fas fa-terminal"></i>&nbsp;Commands</a></li>
+                    <li><a href="/developers"><i class="fas fa-code"></i>&nbsp;developers</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="box">
+                <i class="fas fa-exclamation-triangle fa-10x"></i>
+                <br>
+                <h1>Page Not Found</h1>
+                <br>
+                <p>return to home</p>
+                <br>
+                <a href="/"><button><i class="fas fa-home"></i>&nbsp;Home</button></a>
+            </div>
+
+    </body>
+</html>

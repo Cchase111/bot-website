@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" >
+        <script src="https://kit.fontawesome.com/95fb04c6ee.js" crossorigin="anonymous"></script>
+        <title> <%= client.user.username %> - commands </title>
+    </head>
+
+    <body>
+        <!-- nav bar -->
+        <nav>
+            <img src=" <%= client.user.displayAvatarURL({dynamic : true}) %> ">
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i>&nbsp;Home</a></li>
+                <li><a href="/commands"><i class="fas fa-terminal"></i>&nbsp;Commands</a></li>
+                <li><a href="/developers"><i class="fas fa-code"></i>&nbsp;developers</a></li>
+            </ul>
+        </nav>
+
+        <center>
+            <div class="main-cmd">
+                <div class="cmd">
+                    /help<span> - to view bot commands</span>
+                </div>
+                <div class="cmd">
+                    /ping<span> - to view bot ping</span>
+                </div>
+                <div class="cmd">
+                    /bot<span> - to view bot info</span>
+                </div>
+                <div class="cmd">
+                    /set-channel<span> - to set azkar channel </span>
+                </div>
+                <div class="cmd">
+                    /set-time<span> - to set azkar time</span>
+                </div>
+                <div class="cmd">
+                    /azkar-alsabh<span> - to view azkar azkar-alsabh</span>
+                </div>
+                <div class="cmd">
+                    /quran<span> - to view quran pages</span>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

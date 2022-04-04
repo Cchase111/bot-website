@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://kit.fontawesome.com/95fb04c6ee.js" crossorigin="anonymous"></script>
+    <title> <%= client.user.username %> - admin panel </title>
+</head>
+<body>
+        <!-- nav bar -->
+        <nav>
+            <img src=" <%= client.user.displayAvatarURL({dynamic : true}) %> ">
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i>&nbsp;Home</a></li>
+                <li><a href="/commands"><i class="fas fa-terminal"></i>&nbsp;Commands</a></li>
+                <li><a href="/developers"><i class="fas fa-code"></i>&nbsp;developers</a></li>
+                <li><a href="/time-convertor"><i class="fas fa-clock"></i>&nbsp;Time Convertor</a></li>
+                <% if(user){ %>
+                    <% if(config.bot.owners.includes(user.id)){ %>
+                        <li><a href="/admin-panel"><i class="fas fa-cogs"></i>&nbsp;admin</a></li>
+                    <% } %>
+                    <li><a href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp;logout</a></li>
+                    <% } %>
+            </ul>
+        </nav>
+        <div class="admin-main">
+            <div class="admin-title">
+                <h1>
+                    WELCOME <%= user.username %>#<%= user.discriminator %> <i class="fas fa-hand-sparkles"></i>
+                </h1>
+            </div>
+            <div class="title">
+                <h1>
+                    <i class="fas fa-info-circle"></i> bot status
+                </h1>
+            </div>
+            <div class="admin-bot-status">
+                <div class="container">
+                    <div class="row-1">
+                        <div class="content">
+                            <div class="head">
+                                <div class="text">
+                                    <i class="fas fa-id-card"></i>&nbsp;name & id
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="txt">
+                                    <p>
+                                        bot name : <%= client.user.username %>#<%= client.user.discriminator %>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        bot id : <%= client.user.id %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="head">
+                                <div class="text">
+                                    <i class="fas fa-server"></i></i>&nbsp;servers
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="txt">
+                                    <p>
+                                        servers number : <%= client.guilds.cache.size %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="head">
+                                <div class="text">
+                                    <i class="fas fa-hashtag"></i>&nbsp;channels
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="txt">
+                                    <p>
+                                        channels : <%= client.channels.cache.size %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-2">
+                        <div class="content">
+                            <div class="head">
+                                <div class="text">
+                                    <i class="fas fa-users"></i>&nbsp;users
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="txt">
+                                    <p>
+                                        users : <%= client.users.cache.size %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="head">
+                                <div class="text">
+                                    <i class="fas fa-spinner"></i>&nbsp;ping
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="txt">
+                                    <p>
+                                        ping : <%= client.ws.ping %> ms
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="head">
+                                <div class="text">
+                                    <i class="fas fa-crown" style="color: yellow;"></i>&nbsp;owners
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div class="txt">
+                                    <p>
+                                        name : A7MED#6969
+                                    </p>
+                                    <p>
+                                        id : 744183251102335007
+                                    </p>
+                                    <br>
+                                    <p>
+                                        name : Moriano ,#4534
+                                    </p>
+                                    <p>
+                                        id : 845021005897400361
+                                    </p>
+                                    <br>
+                                    <p>
+                                        name : M7md#3700
+                                    </p>
+                                    <p>
+                                        id : 919372339559415848
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="admin-secondry">
+            <div class="bot-servers">
+                <div class="bot-servers-title">
+                    <h1>
+                        <i class="fas fa-server"></i>&nbsp;bot servers
+                    </h1>
+                </div>
+                <div class="bot-servers-container">
+                    <% client.guilds.cache.forEach(guild => { %>
+                        <div class="bot-servers-content">
+                            <div class="bot-servers-content-img">
+                                <img src=" <%= guild.iconURL({ dynamic : true }) %> ">
+                        </div>
+                        <div class="bot-servers-content-info">
+                            <p>
+                                <i class="fas fa-info-circle"></i>&nbsp;server name : <%= guild.name %>
+                            </p>
+                            <p>
+                                <i class="fas fa-address-card"></i>&nbsp;server id : <%= guild.id %>
+                            </p>
+                            <p>
+                                <i class="fas fa-users"></i>&nbsp;server members : <%= guild.memberCount %>
+                            </p>
+                            <p>
+                                <i class="fas fa-hashtag"></i>&nbsp;server channels : <%= guild.channels.cache.size %>
+                            </p>
+                            <p>
+                                <i class="fas fa-clock"></i>&nbsp;created at : <%= guild.createdAt %>
+                            </p>
+                            <p>
+                                <i class="fas fa-arrow-circle-right"></i>&nbsp;joined at : <%= guild.joinedAt %>
+                            </p>
+                            <p>
+                                <i class="fas fa-crown" style="color: yellow;"></i>&nbsp;owner id : <%= guild.ownerId %>
+                            </p>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

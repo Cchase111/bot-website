@@ -1,0 +1,341 @@
+:root {
+    --background: #111011;
+    --background2:#1a1a1a;
+    --background3:#202020;
+    --prim : #ED24A8;
+    --prim2 :#ED3FF5;
+    --other :#252525;
+    --txt: rgb(231, 222, 222);
+    --txt2: rgb(107, 105, 105);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: var(--background);
+}
+nav {
+    height: 55px;
+    background-color: var(--background);
+    display: flex;
+    align-content: center;
+}
+
+nav img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--txt);
+    font-size: 20px;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+nav ul li:hover a {
+    color: var(--prim);
+}
+
+/* main */
+
+.main-div {
+    background-color:var(--background);
+    min-height: 250px;
+}
+
+.bot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    min-height: 250px;
+}
+
+.bot img {
+    border-radius: 55px;
+    margin-right: 50px;
+}
+
+.bot .bot-info h1 {
+    color: var(--txt);
+}
+
+.bot .bot-info p {
+    color: var(--txt);
+
+}
+
+.bot .bot-info .bot-links {
+    display: flex;
+
+}
+
+.bot .bot-links button {
+    width: 130px;
+    height: 45px; 
+    background-color: var(--other);
+    border-radius: 5px;
+    font-size: 17px;
+    color: var(--txt);
+    border: black;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.bot .bot-links button:hover {
+    transform: scale(1.1);
+}
+
+.bot .bot-links .sup {
+    margin-left: 10px;
+}
+
+.prim-div {
+    min-height: 750px;
+    background-color: var(--background2);
+}
+
+.prim-div .heading {
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+
+.prim-div .heading h1 {
+    color: var(--txt);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: var(--txt);
+}
+
+.content .contener .description {
+    align-self: center;
+}
+
+.content .contener .description h2 {
+    font-weight: bold;
+    margin-bottom: 5px;
+    align-self: center;
+}
+
+.contener {
+    background-color: var(--other);
+    width: 400px;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    border-radius: 10px;
+}
+
+.bot-status {
+    margin-top: 20px;
+}
+
+.bot-status .bot-status-title {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: var(--txt);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.bot-status .bot-status-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+}
+
+
+.bot-status .bot-status-container .bot-status-content {
+    width: 250px;
+    height: 150px;
+    background-color: var(--background3);
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--txt);
+}
+
+.bot-status .bot-status-container .bot-status-content .head .text {
+    background-color: var(--background2);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* commands */
+
+.main-cmd {
+    margin-top: 70px;
+    min-height: 520px;
+}
+
+.cmd {
+    color: var(--txt);
+    background-color: var(--other);
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 50%;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.cmd span {
+    font-size: 20px;
+    color: var(--txt2);
+    text-transform: capitalize;
+}
+
+/* developers */
+
+.dev-content {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    color: var(--txt);
+}
+
+.dev-content .info {
+    width: 250px;
+    height: 300px;
+    background-color: var(--other);
+    border-radius: 10px;
+}
+
+.dev-content .info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.dev-content .info h1 {
+    font-size: 30px;
+}
+
+.dev-content .info .links {
+    margin-top: 15px;
+}
+
+.dev-content .info .links a {
+    color: var(--txt2);
+    margin: 5px;
+}
+
+/* 404 */
+
+.box {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--txt);
+}
+
+.box button {
+    width: 130px;
+    height: 45px; 
+    background-color: var(--other);
+    border-radius: 5px;
+    font-size: 17px;
+    color: var(--txt);
+    border: black;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.box button:hover {
+    transform: scale(1.1);
+    color: var(--prim);
+}
+
+/*  */
+
+footer {
+    color: var(--txt);
+    height: 70px;
+    background-color: var(--other);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    align-self: center;
+}
+
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #555;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::selection {
+    color: var(--prim);
+}
+
+/* font awesome styles */
+
+.fa-star {
+    color: yellow;
+}
+.fa-hand-sparkles {
+    color: #31b1d9;
+}
+.fa-instagram{ 
+    color: #d6249f;
+}
+.fa-github {
+    color: #eee;
+}
+.fa-twitter {
+    color: #1DA1F2;
+}
+.fa-facebook {
+    color: rgb(61, 61, 240);
+}
+
