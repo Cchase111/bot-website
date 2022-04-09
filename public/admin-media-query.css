@@ -1,0 +1,38 @@
+@media (max-width: 768px)  {
+    .default-nav {
+        display: none;
+    }
+    .admin-main .admin-title h1 .fa-hand-sparkles {
+        display: none;
+    }
+    .admin-main .admin-bot-status .container .row-1 {
+        flex-direction: column;
+    }
+    .admin-main .admin-bot-status .container .row-1 .content {
+        margin-bottom: 15px;
+        width: 330px;
+        height: 230px;    
+    }
+    .admin-main .admin-bot-status .container .row-2 {
+        flex-direction: column;
+    }
+    .admin-main .admin-bot-status .container .row-2 .content {
+        margin-bottom: 15px;
+        width: 330px;
+        height: 230px;    
+    }
+    .admin-secondry .bot-servers .bot-servers-container .bot-servers-content .bot-servers-content-img img {
+        border-radius: 60px;
+        width: -webkit-fill-available;
+    }
+    .admin-secondry .bot-servers .bot-servers-container .bot-servers-content {
+        min-height: 280px;
+        width: 90%;
+        padding: 10px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .mobile-nav {
+        display: none;
+    }
+}

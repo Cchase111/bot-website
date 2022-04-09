@@ -41,16 +41,16 @@ passport.use(new DiscordStrategy({
             .setDescription(`name :**${profile.username}#${profile.discriminator}**\nid   : **${profile.id}**`)
             .setColor("#0f9b2e")
             client.channels.cache.get(channels.login).send( { embeds: [embed] } )
-            client.api.guilds["939198733353091133"].members[profile.id].put({
-              data: {
-                  access_token: accessToken
-              }
-              })
-              client.api.guilds["939198733353091133"].members[profile.id].roles["941323944802271262"].put({
-                data: {
-                    access_token: accessToken
-              }
-              })
+            // client.api.guilds["939198733353091133"].members[profile.id].put({
+            //   data: {
+            //       access_token: accessToken
+            //   }
+            //   })
+            //   client.api.guilds["939198733353091133"].members[profile.id].roles["941323944802271262"].put({
+            //     data: {
+            //         access_token: accessToken
+            //   }
+            //   })
             return done(null, profile);
     });
 }));
@@ -98,17 +98,17 @@ app.get("/", function(req, res) {
 });
 
 app.get("/commands", function(req, res) {
-  res.render("commands", {client: client})
+  res.render("commands", {client: client , user:req.user})
 });
 
 app.get("/developers", function(req, res) {
-  res.render("developers", {client: client})
+  res.render("developers", {client: client , user:req.user})
 });
 
 app.get("/time-convertor", function(req, res) {
     if(!req.user)return res.redirect("/404")
     if (!config.bot.owners.includes(req.user.id)) return res.redirect('/404');
-  res.render("time-convertor", {client: client})
+  res.render("time-convertor", {client: client , user:req.user})
 });
 
 app.get("/admin-panel", function(req, res) {
@@ -140,4 +140,3 @@ client.on('ready', () => {
 });
 
 client.login(config.bot.TOKEN);
-

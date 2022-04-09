@@ -4,15 +4,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css" >
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="media-query.css">
         <script src="https://kit.fontawesome.com/95fb04c6ee.js" crossorigin="anonymous"></script>
         <title> <%= client.user.username %> - home </title>
     </head>
-
     <body>
         <!-- nav bar -->
-        <nav>
-            <img src=" <%= client.user.displayAvatarURL({dynamic : true}) %> ">
+        <nav class="default-nav">
+            <img src=" <%= client.user.displayAvatarURL({ dynamic : true }) %> " alt="">
             <ul>
                 <li><a href="/"><i class="fas fa-home"></i>&nbsp;Home</a></li>
                 <li><a href="/commands"><i class="fas fa-terminal"></i>&nbsp;Commands</a></li>
@@ -22,6 +22,19 @@
                         <li><a href="/admin-panel"><i class="fas fa-cogs"></i>&nbsp;admin</a></li>
                     <% } %>
                     <li><a href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp;logout</a></li>
+                <% } %>
+            </ul>
+        </nav>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i></a></li>
+                <li><a href="/commands"><i class="fas fa-terminal"></i>&nbsp;cmd's</a></li>
+                <li><a href="/developers"><i class="fas fa-code"></i>&nbsp;dev's</a></li>
+                <% if(user){ %>
+                    <% if(config.bot.owners.includes(user.id)){ %>
+                        <li><a href="/admin-panel"><i class="fas fa-cogs"></i></a></li>
+                    <% } %>
+                    <li><a href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
                 <% } %>
             </ul>
         </nav>
@@ -132,7 +145,7 @@
                 </div>
             </div>
         <footer>
-            <p>2022 all writes reserved</p>
+            <p>2022 all rights reserved</p>
         </footer>
     </body>
 </html>
