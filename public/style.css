@@ -230,6 +230,10 @@ body {
 .main-cmd {
     margin-top: 40px;
     min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .cmd {
