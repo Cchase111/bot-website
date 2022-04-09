@@ -11,17 +11,34 @@
     </head>
 
     <body>
-                <!-- nav bar -->
-            <nav>
-                <img src=" <%= client.user.displayAvatarURL({dynamic : true}) %> ">
-                <ul>
-                    <li><a href="/"><i class="fas fa-home"></i>&nbsp;Home</a></li>
-                    <li><a href="/commands"><i class="fas fa-terminal"></i>&nbsp;Commands</a></li>
-                    <li><a href="/developers"><i class="fas fa-code"></i>&nbsp;developers</a></li>
-                </ul>
-            </nav>
-
-
+        <!-- nav bar -->
+        <nav class="default-nav">
+            <img src=" <%= client.user.displayAvatarURL({ dynamic : true }) %> " alt="">
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i>&nbsp;Home</a></li>
+                <li><a href="/commands"><i class="fas fa-terminal"></i>&nbsp;Commands</a></li>
+                <li><a href="/developers"><i class="fas fa-code"></i>&nbsp;developers</a></li>
+                <% if(user){ %>
+                    <% if(config.bot.owners.includes(user.id)){ %>
+                        <li><a href="/admin-panel"><i class="fas fa-cogs"></i>&nbsp;admin</a></li>
+                    <% } %>
+                    <li><a href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp;logout</a></li>
+                <% } %>
+            </ul>
+        </nav>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i></a></li>
+                <li><a href="/commands"><i class="fas fa-terminal"></i>&nbsp;cmd's</a></li>
+                <li><a href="/developers"><i class="fas fa-code"></i>&nbsp;dev's</a></li>
+                <% if(user){ %>
+                    <% if(config.bot.owners.includes(user.id)){ %>
+                        <li><a href="/admin-panel"><i class="fas fa-cogs"></i></a></li>
+                    <% } %>
+                    <li><a href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
+                <% } %>
+            </ul>
+        </nav>
             <div class="box">
                 <i class="fas fa-exclamation-triangle fa-10x"></i>
                 <br>

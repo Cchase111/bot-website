@@ -122,7 +122,7 @@ app.get("/admin-panel", function(req, res) {
 });
 
 app.get('*', (req, res) => {
-  res.render("404", {client: client})
+  res.render("404", {client: client , user:req.user});
 });
 
 //other
