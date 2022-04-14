@@ -178,70 +178,6 @@ nav ul li:hover a {
     margin-bottom: 5px;
 }
 
-
-
-/* time-convertor */
-
-.convertor-div {
-    background-color: #1f1d1d;
-    margin-top: 50px;
-    min-width: 250px;
-    max-width: 300px;
-    min-height: 150px;
-    border-radius: 10px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.convertor-div input {
-    -webkit-appearance: none;
-    border-style: none none solid none;
-    border-color: none;
-    border-bottom-width: 0;
-    border-radius: 2px;
-    padding: 2px;
-}
-
-.convertor-div output {
-    display: flex;
-    background-color: #ffffff;
-    color: #000;
-    height: 19px;
-    width: 201px;
-    padding: 2px;
-    border: 1px solid #000000;
-    border-radius: 2px;
-    font-size: 12.5px;
-}
-
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-input[type=number]{
-    -moz-appearance: textfield;
-}
-
-.main-time-convertor {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    color: var(--txt);
-    background-color: var(--other);
-    margin-top: 10px;
-    min-height: 100px;
-}
-
-.main-time-convertor h1 {
-    font-weight: bold;
-    text-transform: capitalize;
-
-}
-
 footer {
     color: var(--txt);
     height: 70px;
@@ -252,7 +188,13 @@ footer {
 }
 
 footer p {
+    color: var(--txt2);
     align-self: center;
+}
+
+footer a {
+    color: var(--txt);
+    text-decoration: none;
 }
 
 /* scroll  */

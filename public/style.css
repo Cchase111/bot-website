@@ -259,9 +259,9 @@ body {
     margin-top: 70px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     text-align: center;
     color: var(--txt);
+    min-height: 450px;
 }
 
 .dev-content .info {
@@ -297,9 +297,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
     color: var(--txt);
+    min-height: 420px;
 }
 
 .box button {
@@ -331,9 +331,14 @@ footer {
 }
 
 footer p {
+    color: var(--txt2);
     align-self: center;
 }
 
+footer a {
+    color: var(--txt);
+    text-decoration: none;
+}
 
 /* scroll bar */
 

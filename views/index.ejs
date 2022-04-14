@@ -45,11 +45,11 @@
                 <div class="bot-info">
                     <h1><%= client.user.username %> website</h1>
                     <br>
-                    <p>an azkar & quran </p>
+                    <p>bot description</p>
                     <br>
                     <div class="bot-links">
-                        <a href=""><button><i class="fab fa-discord"></i>&nbsp;Invite</button></a>
-                        <a href=""><button class="sup"><i class="fas fa-users"></i>&nbsp;Support</button></a>
+                        <a href="/invite"><button><i class="fab fa-discord"></i>&nbsp;Invite</button></a>
+                        <a href="/discord"><button class="sup"><i class="fas fa-users"></i>&nbsp;Support</button></a>
                     </div>
             </div>
         </div>
@@ -131,21 +131,21 @@
                     <div class="bot-status-content">
                         <div class="head">
                             <div class="text">
-                                <i class="fas fa-satellite"></i>&nbsp;shards
+                                <i class="fas fa-satellite"></i>&nbsp;ping
                             </div>
                         </div>
                         <div class="status-content">
                             <div class="txt">
                                 <p>
-                                    only 1 shard is used now
+                                    <%= client.ws.ping %> ms
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        <footer>
-            <p>2022 all rights reserved</p>
-        </footer>
+            <footer>
+                <p>all rights reserved for <a href="https://www.instagram.com/1._.a7med._.1">A7MED</a></p>
+            </footer>
     </body>
 </html>
