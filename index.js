@@ -30,8 +30,8 @@ global.config = config;
 //passport
 
 passport.use(new DiscordStrategy({
-    clientID: '789189794797322301',
-    clientSecret: 'qhYx_y7Ce6x289ciq4iZZ2IcLZNEyqO_',
+    clientID: '959580146002702346',
+    clientSecret: '6a1MXMWBhEQFgZB8_sDboa1nJQ8m1qz5',
     callbackURL: 'http://localhost:3001/login',
     scope: scopes
 }, function(accessToken, refreshToken, profile, done) {
