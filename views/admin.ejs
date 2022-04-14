@@ -17,9 +17,12 @@
                 <li><a href="/"><i class="fas fa-home"></i>&nbsp;Home</a></li>
                 <li><a href="/commands"><i class="fas fa-terminal"></i>&nbsp;Commands</a></li>
                 <li><a href="/developers"><i class="fas fa-code"></i>&nbsp;developers</a></li>
+                <% if(!user) { %>
+                    <li><a href="/login"><i class="fas fa-sign-in-alt"></i>&nbsp;login</a></li>
+                <% } %>
                 <% if(user){ %>
                     <% if(config.bot.owners.includes(user.id)){ %>
-                        <li><a href="/admin-panel"><i class="fas fa-cogs"></i>&nbsp;admin</a></li>
+                        <li><a href="/admin-panel"><i class="fas fa-cogs"></i>&nbsp;admin panel</a></li>
                     <% } %>
                     <li><a href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp;logout</a></li>
                 <% } %>
@@ -30,6 +33,9 @@
                 <li><a href="/"><i class="fas fa-home"></i></a></li>
                 <li><a href="/commands"><i class="fas fa-terminal"></i>&nbsp;cmd's</a></li>
                 <li><a href="/developers"><i class="fas fa-code"></i>&nbsp;dev's</a></li>
+                <% if(!user) { %>
+                    <li><a href="/login"><i class="fas fa-sign-in-alt"></i>&nbsp;</a></li>
+                <% } %>
                 <% if(user){ %>
                     <% if(config.bot.owners.includes(user.id)){ %>
                         <li><a href="/admin-panel"><i class="fas fa-cogs"></i></a></li>
