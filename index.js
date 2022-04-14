@@ -111,6 +111,14 @@ app.get("/admin-panel", function(req, res) {
   res.render("admin", {client:client , user:req.user});
 });
 
+app.get('/discord', (req, res) => {
+  res.render("");//discord server invite
+});
+
+app.get('/invite', (req, res) => {
+  res.render("");//bot invite
+});
+
 app.get('*', (req, res) => {
   res.render("404", {client: client , user:req.user});
 });
@@ -122,11 +130,7 @@ var listeners = app.listen(config.website.PORT, function() {
 });
 
 client.on('ready', () => {
-  client.user.setPresence({
-    status : 'invisible'
-  })
     console.log(`Bot is On! ${client.user.tag}`);
-    console.log("kolo t7t el sytara")
 });
 
 client.login(config.bot.TOKEN);
