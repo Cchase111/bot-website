@@ -30,9 +30,9 @@ global.config = config;
 //passport
 
 passport.use(new DiscordStrategy({
-    clientID: '959580146002702346',
-    clientSecret: '6a1MXMWBhEQFgZB8_sDboa1nJQ8m1qz5',
-    callbackURL: 'http://localhost:3001/login',
+    clientID: config.bot.botID,
+    clientSecret: config.bot.clientSECRET,
+    callbackURL: config.bot.callbackURL,
     scope: scopes
 }, function(accessToken, refreshToken, profile, done) {
     process.nextTick(function() {
@@ -41,16 +41,16 @@ passport.use(new DiscordStrategy({
             .setDescription(`name :**${profile.username}#${profile.discriminator}**\nid   : **${profile.id}**`)
             .setColor("#0f9b2e")
             client.channels.cache.get(channels.login).send( { embeds: [embed] } )
-            // client.api.guilds["939198733353091133"].members[profile.id].put({
-            //   data: {
-            //       access_token: accessToken
-            //   }
-            //   })
-            //   client.api.guilds["939198733353091133"].members[profile.id].roles["941323944802271262"].put({
-            //     data: {
-            //         access_token: accessToken
-            //   }
-            //   })
+            client.api.guilds[config.server].members[profile.id].put({
+              data: {
+                  access_token: accessToken
+              }
+              })
+              client.api.guilds[config.server].members[profile.id].roles[config.bot.Oauth2RoleID].put({
+                data: {
+                    access_token: accessToken
+              }
+              })
             return done(null, profile);
     });
 }));

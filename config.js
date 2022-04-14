@@ -1,14 +1,17 @@
 module.exports = {
     bot: {
-        owners: ["744183251102335007" , "845021005897400361" , "919372339559415848"],
-        server: "939198733353091133",
-        admin : "943206554696556544",
-        TOKEN : "OTU5NTgwMTQ2MDAyNzAyMzQ2.Ykd8pg.i4SEOjksH6P1yX_nYCrRBvZu9nI",
+        owners: ["744183251102335007" , "" , ""],// ايدي الاونرز
+        server: "939198733353091133",// ايدي السيرفر
+        botID : "901449764745388063",// ايدي البوت
+        clientSECRET: "nM2goT3SwXeYRIoNTbxfjCGfMPou1XEI",// السكريت بتاع البوت
+        callbackURL: "http://localhost:3001/login",//احط رابط الموقع ومتشليش (/login)
+        TOKEN : "OTAxNDQ5NzY0NzQ1Mzg4MDYz.YXQChA.tLxXI3ge6U2Emtiit9NYZtIRLAU",// توكن البوت
+        Oauth2RoleID: "901449764745388063",// ايدي التربه اللي ياخدها الشخص لما يسجل  دخول فالموقع
     },
     channels: {
-        login: "943216110315110480",
+        login: "960715167635763260",// ايدي روم اللوج 
     },
     website: {
-        PORT: "3001",
+        PORT: "3001",// دا البورت
     }
 }
