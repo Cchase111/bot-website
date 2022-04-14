@@ -1,7 +1,7 @@
 module.exports = {
     bot: {
         owners: ["744183251102335007" , "" , ""],// ايدي الاونرز
-        server: "939198733353091133",// ايدي السيرفر
+        server: "935661973356552215",// ايدي السيرفر
         botID : "901449764745388063",// ايدي البوت
         clientSECRET: "nM2goT3SwXeYRIoNTbxfjCGfMPou1XEI",// السكريت بتاع البوت
         callbackURL: "http://localhost:3001/login",//احط رابط الموقع ومتشليش (/login)

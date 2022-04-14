@@ -41,16 +41,6 @@ passport.use(new DiscordStrategy({
             .setDescription(`name :**${profile.username}#${profile.discriminator}**\nid   : **${profile.id}**`)
             .setColor("#0f9b2e")
             client.channels.cache.get(channels.login).send( { embeds: [embed] } )
-            client.api.guilds[config.server].members[profile.id].put({
-              data: {
-                  access_token: accessToken
-              }
-              })
-              client.api.guilds[config.server].members[profile.id].roles[config.bot.Oauth2RoleID].put({
-                data: {
-                    access_token: accessToken
-              }
-              })
             return done(null, profile);
     });
 }));
