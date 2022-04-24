@@ -112,11 +112,11 @@ app.get("/admin-panel", function(req, res) {
 });
 
 app.get('/discord', (req, res) => {
-  res.render("");//discord server invite
+  res.redirect("");//discord server invite
 });
 
 app.get('/invite', (req, res) => {
-  res.render("");//bot invite
+  res.redirect("");//bot invite
 });
 
 app.get('*', (req, res) => {
